@@ -1,4 +1,5 @@
 import random
+import time
 posizone_iniziale = 1
 percorso = 70
 energia_iniziale = 100
@@ -12,11 +13,8 @@ l = posizone_iniziale
 
 print ("BANG !!!!! AND THEY'RE OFF !!!!!")
 
-def pista(percorso_lunghezza, pista):
-    pista = ["_"]* percorso
-    if tartaruga_pos == lepre_pos:
-        pista[tartaruga_pos - 1]
-        print("OUCH")
+posizione : list ["t"]
+posizone: list [l]
 
 def mosse_tartaruga(t):
     numero = input(random(1,11))
