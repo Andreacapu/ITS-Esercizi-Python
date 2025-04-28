@@ -23,4 +23,4 @@ match neonati_nati:
 
 
     case _:
-        print("non è possibile!!!! n bambini")
+        print(f"non è possibile!!!! {neonati_nati} bambini")
