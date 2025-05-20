@@ -1,0 +1,21 @@
+lista_invitati = ["gianfranco", "riccardo", "samuele"]
+
+lista_invitati.insert(3, "mirko")
+
+lista_invitati.insert (4, "antonio")
+
+lista_invitati.insert (5, "gianfranco")
+
+lista_invitati.pop (5)
+
+lista_invitati.pop (4)
+
+lista_invitati.pop (3)
+
+lista_invitati.pop (2)
+
+del lista_invitati[1]
+
+del lista_invitati [0]
+
+print(lista_invitati)
