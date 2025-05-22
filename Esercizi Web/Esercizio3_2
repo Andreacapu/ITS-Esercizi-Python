@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title><title></title>
+</head>
+<body>
+    <div id="nome"></div>
+    <div id ="età"> </div>
+    <div id="anno_nascita"> </div> 
+    <div id="anni_necessari"></div>
+</body>
+<script>
+        var nome = "Andrea";
+        var num1 = 26;
+        var num2 = 1999;
+        var num3 = 100;
+        var n1 = parseInt(num1);
+        var n2 = parseInt(num2);
+        document.getElementById("età").innerHTML = nome + ": "+ num1;
+        document.getElementById("anno_nascita").innerHTML = num2
+        document.getElementById("anni_necessari").innerHTML = "anni necessari per arrivare a cento: " + (num3 - num1)
+        
+</script>
