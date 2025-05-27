@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title><title></title>
+    </head>
+    <body>
+        <div class="container">
+        <div class="method">
+            <h2>Con ciclo FOR</h2>
+            <div id="tabellina-for"></div>
+
+
+        <div class="method">
+            <h2>Con ciclo WHILE</h2>
+            <div id="tabellina-while"></div>
+    
+    </div>
+        <script>
+                  // Soluzione con ciclo FOR
+        const numero = 5;
+        let risultatoFor = "";
+        for (let i = 1; i <= 10; i++) {
+            risultatoFor += `${numero} × ${i} = ${numero * i}<br>`;
+        }
+        document.getElementById("tabellina-for").innerHTML = risultatoFor;
+        
+        // Soluzione con ciclo WHILE
+        let risultatoWhile = "";
+        let j = 1;
+        while (j <= 10) {
+            risultatoWhile += `${numero} × ${j} = ${numero * j}<br>`;
+            j++;
+        }
+        document.getElementById("tabellina-while").innerHTML = risultatoWhile;
+    </script>
+        
+    </body>
+
+</html>

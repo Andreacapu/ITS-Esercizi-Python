@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <meta charset="UTF-8">
+    <title><title></title>
+    <head>
+    <body>
+        
+        <div id="risultato"></div>
+        <div id="saluto"></div>
+
+        <script>
+            // esempio funzione che ritorna nulla, scrive nella pagina
+            function somma(num1, num2){
+                document.getElementById("risultato").innerHTML ="La somma è " + (num1 + num2)
+                
+            }
+            somma(0,0)
+            //somma(5) // ritorna NaN
+
+            function benevenuto(nome){
+                return "Welcome " + nome
+            }
+            let nome = prompt("Inserisci il nome: ")
+            let output = benevenuto(nome)
+            document.getElementById("saluto").innerHTML = output
+        </script>
+    </body>
+    </head>
+</html>
