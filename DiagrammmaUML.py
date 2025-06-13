@@ -46,7 +46,7 @@ class Progetto:
         self.impiegato = impiegato
     def give_impiegato(self, impiegato:str):
         return impiegato
-    def set_budget(self, budget: float):
+    def set_budget(self, budget: float)è:
         self._budget = budget
     def give_budget(self, budget: float):
         return budget
