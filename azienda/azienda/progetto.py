@@ -35,8 +35,6 @@ class Progetto:
     def impiegati(self, impiegato:Impiegato) -> Impiegato:
         return Impiegato
     
-    def add_progetto(self) -> frozenset(Impiegato):
-        return frozenset(self._set_impiegati)
 
 
 
