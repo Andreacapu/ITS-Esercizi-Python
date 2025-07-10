@@ -33,11 +33,15 @@ const elimina = {id} => {
   return (
     <div className="App">
       <h1>Ciao 2 {nome}!</h1>
+      <cleanUp></cleanUp>
       <stampa_numeri></stampa_numeri>
       <Componente1>Andrea</Componente1>
       <Componente1/>
       <h2>
-      <Clock></Clock>
+      <Clock timezone="1" country="Italy"></Clock>
+      <Clock timezone="-6" country="USA"></Clock>
+      <Clock timezone="8" country="Japan"></Clock>
+      <Contatore></Contatore>
       </h2>
 
       <header className="App-header">

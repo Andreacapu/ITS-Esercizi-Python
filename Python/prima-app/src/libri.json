@@ -1,0 +1,25 @@
+{
+    "libri" :[
+        {
+            "id": 1,
+            "titolo": "Dune",
+            "autore": "Frank Herbert",
+            "anno": 1969,
+            "disponibilità": true
+        },
+        {
+            "id": 2,
+            "titolo": "1984",
+            "autore": "George Orwell",
+            "anno": 1949,
+            "disponibilità": false
+        },
+    {
+        "id": 3,
+        "titolo": "Dio non abita all'Avana",
+        "autore": "Yasmina Khadra",
+        "anno": 2016,
+        "disponibilità": true
+    }
+    ]
+}
