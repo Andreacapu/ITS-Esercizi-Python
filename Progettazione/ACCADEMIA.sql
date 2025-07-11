@@ -31,13 +31,36 @@ create table WP(
 );
 
 create table AttivaProgetto(
-	id posInteger,
-	Persona posInteger,
-	progetto posInteger,
-	wp posInteger,
+	id posInteger not null,
+	Persona posInteger not null,
+	progetto posInteger not null,
+	wp posInteger not null,
 	giorno date,
-	oreDurata NumeroOre, 
+	oreDurata NumeroOre not null,
+	primary key(id)
+	foreign key(persona) references Persona(id)
+	foreign key(progetto, wp) references WP(progetto, id) 
+);
 
+create table AttivitaNonProgettuale(
+	id posInteger not null,
+	persona posInteger not null,
+	progetto posInteger not null,
+	giorno date,
+	date NumeroOre not null,
+	check(inizio > fine)
+	primary key(id),
+	foreign key(persona) references Persona(id)
+);
+
+create table Assenza(
+	id posInteger not null,
+	persona posInteger not null,
+	tipo CausaAssenza not null,
+	giorno date,
+	primary key(id)
+	foreign key(persona, id)
+	foreign key(persona) references Persona(id)
 );
 
 
