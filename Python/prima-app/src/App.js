@@ -20,13 +20,13 @@ function App() {
     setNome1(nome);
     console.log(nome);
   };
-  const cliccami = {nome, cognome} =>
+  const cliccami = (nome, cognome) =>
      {
     //istruzioni
     alert ("Ciao" + nome +" " + cognome);
   };
-  const [persone, setPersone] = useState{anagrafica};
-const elimina = {id} => {
+  const [persone, setPersone] = useState(anagrafica);
+const elimina = (id) => {
   const newAnag = persone.filter((p) => p.id !== id);
 }
 
@@ -42,6 +42,8 @@ const elimina = {id} => {
       <Clock timezone="-6" country="USA"></Clock>
       <Clock timezone="8" country="Japan"></Clock>
       <Contatore></Contatore>
+      <CambiaNome></CambiaNome>
+      <LoginForm></LoginForm>
       </h2>
 
       <header className="App-header">
