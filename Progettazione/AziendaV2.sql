@@ -1,4 +1,4 @@
-create database Azienda;
+ccreate database Azienda;
 
 create domain RealGEZ as integer check(value>=0);
 create domain Stringa as varchar;
@@ -7,45 +7,54 @@ create type Indirizzo as (
     civico Stringa
 );
 
+begin transaction;
+
+set constraints all deferred;
+
 create table Impiegato(
     nome Stringa not null,
     cognome Stringa not null,
     nascita date not null,
     stipendio RealGEZ not null,
     id integer not null,
-    primary key(Impiegato, Dipartimento, Progetto),
-    foreign key(Impiegato) references Impiegato(id),
-    foreign key(Progetto) references(id),
-    foreign key(Dipartimento) references(id)
+    progetto integer not null,
+    dipartimento integer not null,
+    primary key(id),
+    foreign key(progetto) references Progetto(id) DEFERABLE,
+    foreign key(dipartimento) references Dipartimento(id) DEFERABLE
 );
-
 create table Progetto(
     nome Stringa not null,
     budget RealGEZ not null,
     id integer not null,
-    primary key(Progetto, Impiegato),
-    foreign key(Progetto) references(id),
-    foreign key(Impiegato) references(id)
+    impiegato id not null,
+    primary key(id),
+    foreign key(impiegato) references(id) DEFERABLE
 );
 
 create table Affarenza(
+    impiegato id not null,
+    dipartimento id not null,
     data_afferenza date not null,
-    foreign key(Impiegato) references(id),
-    foreign key(Dipartimento) references(id)
-);
+    primary key(data_afferenza),
+    foreign key(impiegato) references Impiegato(id) DEFERABLE,
+    foreign key(dipartimento) references Dipartimento(id) DEFERABLE
+); 
+
 create table NumeroTelefono(
     telefono Stringa not null,
-    primary key(NumeroTelefono, Dipartimento),
-    foreign key(Dipartimento) references(id)
-    foreign key(NumeroTelefono) references(id)
+    dipartimento id not null,
+    primary key(telefono),
+    foreign key(dipartimento) references Dipartimento(id) DEFERABLE
 );
 
 create table Dipartimento(
     nome Stringa not null,
     indirizzo as Indirizzo not null,
     id Stringa not null,
-    primary key(Dipartimento, Impiegato, NumeroTelefono)
-    foreign key(Dipartimento) references(id)
-    foreign key(Impiegato) references(id)
-    foreign key(NumeroTelefono) references(id)
+    impiegato id not null,
+    telefono id not null,
+    primary key(id),
+    foreign key(impiegato) references Impiegato(id) DEFERABLE,
+    foreign key(telefono) references NumeroTelefono(id) DEFERABLE
 );
