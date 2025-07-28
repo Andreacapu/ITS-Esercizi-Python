@@ -5,6 +5,7 @@ import Clock from './Clock';
 import Componente1 from './Compnente1';
 import {anagrafica} from "./data/Database";
 import { useState } from 'react';
+import FetchComponent from './FetchComponents';
 function getDate(date){
   return date.toLocalDateString()+" "+date.toLocalDateString()
 }
@@ -33,6 +34,7 @@ const elimina = (id) => {
   return (
     <div className="App">
       <h1>Ciao 2 {nome}!</h1>
+      <FetchComponent></FetchComponent>
       <cleanUp></cleanUp>
       <stampa_numeri></stampa_numeri>
       <Componente1>Andrea</Componente1>
