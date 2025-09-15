@@ -1,0 +1,57 @@
+n = '00c2c176c9164c99efa401ae3342ec'+\
+'0721ce53b3f8d87ed3b1d0a52d7d50'+\
+'4a080f7740384ebd89757ff3e9d1e6'+\
+'91b2e590ae056991ec7350c471c120'+\
+'bd0b04d00ebec0d0b895b7a7575912'+\
+'444740d3ac9bba712c6341dc50880f'+\
+'2ed702290859bad4c6b3662716ce28'+\
+'a2ff4562a3bf2de8daf289f1e1b58a'+\
+'7c6b068d18b9f42645650392ece45d'+\
+'8aa8fd00a7e01a4480eb205db6ae79'+\
+'12577a42fb221fa932cf9405c4a995'+\
+'0b19d348766c3376c9b9bd9e0e2da7'+\
+'b53a9c46f95af6935136ca2beba7b5'+\
+'91b51c419faca3dddad6d4ed98099c'+\
+'61471c0b4620141be61e52f2c75419'+\
+'c709153258727adf92ca7ccc6efa8f'+\
+'3e713ecf17e9b466ef60542f6a9333'+\
+'22a7'
+
+decimale = int(n, 16)
+
+#cifra
+M = 'Ciao, Mondo!'
+
+Mi=int(M.encode("utf-8").hex(), 16)
+
+e= 3
+
+c=pow(Mi, e, decimale)
+print(c)
+
+
+
+d = '207593cc2e6219a7f0aaf25de07cab'+\
+'daf7b89dfecebfcdf2f81b8794e2b7'+\
+'0157e9355eb7ca4193955351a2fbc2'+\
+'f32642c7ab919852133820bda0301f'+\
+'81d622ad1fcacd7418f3f13939830b'+\
+'6135789cc49f12dcbb35a4b816ad32'+\
+'792b06d6b99f2376733bb12e77b170'+\
+'7fe0e5c5f5325179d316fda59e41bf'+\
+'672bc22ec9a8b10b46276290fbb4be'+\
+'8f695b21f829aa82f2631f1eddcc81'+\
+'4f86e89b9ee392b1c8126949680167'+\
+'17aa5d7b6aeaf2384de3146cfbd5ea'+\
+'907beadb899a6da38d3dc740316dbe'+\
+'373ddab3452396cbd0410b22c879a3'+\
+'6e2be83dfaaf5a8b5c6a22936a388d'+\
+'95d45e8d2d850095cb68ed5a450c13'+\
+'9565ee5b09046ee79fcf89d3efa0fb'+\
+'4b'
+
+decimale = int(n, 16)
+
+decifrato =pow(c, d, decimale)
+
+print(decifrato)
