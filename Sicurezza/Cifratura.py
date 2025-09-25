@@ -50,8 +50,8 @@ d = '207593cc2e6219a7f0aaf25de07cab'+\
 '9565ee5b09046ee79fcf89d3efa0fb'+\
 '4b'
 
-decimale = int(n, 16)
+d_decimale = int(d, 16)
 
-decifrato =pow(c, d, decimale)
+decifrato =pow(c, d_decimale, decimale)
 
 print(decifrato)
